@@ -13,22 +13,35 @@ public class Facebook {
 		WebDriver driver = new ChromeDriver();
 		
 		//Open AUT
-		driver.get("https://www.facebook.com/");
+		//driver.get("https://www.facebook.com/");
 		
-		/*//Using id
+		
+		/*Using id
 		driver.findElement(By.id("u_0_c")).sendKeys("Priya");
 		driver.findElement(By.id("u_0_e")).sendKeys("Patel");
 		driver.findElement(By.id("u_0_h")).sendKeys("7327072320");
 		
 		//Using Name
 		driver.findElement(By.name("firstname"));
-		*/
+		
 		//Using Class Name
 		driver.findElement(By.className("inputtext")).sendKeys("Priya");
 		driver.findElement(By.className("inputtext")).sendKeys("Patel");
 		
+		
 		//Using Linktext
-		driver.findElement(By.linkText(""))
+		driver.findElement(By.linkText("Forgot account?")).click();
+		
+		//To navigate back to home page
+		driver.navigate().back();
+		
+		
+		//Using Partial Link Text
+		driver.findElement(By.partialLinkText("do I")).click();
+		*/
+		
+		//Using CSS
+		driver.findElement(By.cssSelector("input#text-input-what")).sendKeys("BA");
 
 	}
 
